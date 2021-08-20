@@ -1,0 +1,54 @@
+html{
+  --black: #0d114f;
+  --white: #fafafa;
+  --red: #e83f5b;
+  --light-blue: #e0ecff;
+  --blue: #3485ff;
+  --background: #f6faff;
+  --overlay: #040911;
+  --icons-details: #a5b0c1;
+
+  /*section grey*/
+
+  --grey-dark: #4d5e77;
+  --grey-blue: #a1b2cd;
+  --grey-light: #e5eaf1;
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #FBFCFF;
+}
+body{
+  font: 400 16px "Poppins", sans-serif;
+  font-size: 62.5%
+}
+.sr-only{
+  position:absolute;
+  height: 1px;
+  width: 1px;
+  padding:0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0 ,0 , 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+input{
+  outline: none;
+}
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+  -moz-appearance: textfield;
+  appearance: textfield;
+
+}
