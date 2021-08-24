@@ -37,7 +37,7 @@ export function CreateRoom(){
       codigo: newRoom
     })
 
-    history.push(`/rooms/admin/${firebaseRoom.key}`)
+    history.push(`/admin/rooms/${firebaseRoom.key}`)
   }
   
   return(

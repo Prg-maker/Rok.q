@@ -1,9 +1,17 @@
+import '../styles/roomcode.scss'
+
+
 import copyImg from '../assets/images/copy.svg'
+import { useParams } from 'react-router-dom';
+
 
 export function RoomCode(props){
 
+  const params = useParams()
+  
+
   function copyRoomCodeToClipboard(){
-    navigator.clipboard.writeText(props.code)
+    navigator.clipboard.writeText(params.codigo)
   } 
 
   return(
