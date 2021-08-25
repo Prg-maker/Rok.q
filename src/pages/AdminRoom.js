@@ -11,7 +11,6 @@ import {RoomCode} from '../components/RoomCode'
 
 import '../styles/globalStyles.scss'
 
-import '../styles/room.scss'
 
 export function AdminRoom(){
 
