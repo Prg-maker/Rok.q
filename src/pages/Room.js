@@ -4,11 +4,12 @@ import { useParams} from 'react-router-dom'
 import logoImg from '../assets/images/logo.svg'
 import userWhiteImg from '../assets/images/users-white.svg'
 import lockImg from '../assets/images/lock.svg'
-import userImg from '../assets/images/user.svg'
 
 
 import {Button} from '../components/Button'
 import {RoomCode} from '../components/RoomCode'
+import {Question} from '../components/Question'
+
 import {database} from '../services/firebase'
 
 import '../styles/globalStyles.scss'
@@ -21,8 +22,7 @@ export function Room(){
   const [newQuestion , setNewQuestion] = useState('')
   const params = useParams()
   const roomId  = params.codigo
-
-  const {question , title} = useRoom('')
+  const {question , title} = useRoom(roomId)
 
   
     async function handleSendQuestion(event){
@@ -40,9 +40,9 @@ export function Room(){
 
     await database.ref(`rooms/new/${roomId}/questions`).push(question)
     setNewQuestion('')
-    
    
   }
+  
   
   return(
     <div className="container">
@@ -91,18 +91,21 @@ export function Room(){
 
 
           <section id="questions">
-            <h2 className="sr-only">Perguntas da comudade</h2>
+            <h2 className="sr-only">Perguntas da comunidade</h2>
             <div className="questions">
-              <div className="question-wrapper">
-                <div className="user">
-                  <img  src={userImg} alt='usúario'/>
-                </div>
-                <div className="question">
-                 <div
-                    content={question}
-                 />
-                </div>
-              </div>
+
+            {question.map(question => {
+
+              return(
+                <Question
+                  key={question.id}
+                  content={question.content}
+                >
+                </Question>
+              )
+            })}
+
+
             </div>
           </section>
         </main>
