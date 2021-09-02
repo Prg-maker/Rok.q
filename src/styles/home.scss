@@ -1,7 +1,7 @@
-.container{
+.container {
  height: 100vh;
  background: var(--background);
-  overflow: hidden;
+  overflow: auto;
   header{
     margin: 2rem 8.2rem;
   }
@@ -84,6 +84,7 @@
     
 
   }
+ 
  
 }
 

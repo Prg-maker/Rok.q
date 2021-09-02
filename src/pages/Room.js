@@ -22,10 +22,9 @@ export function Room(){
   const [newQuestion , setNewQuestion] = useState('')
   const params = useParams()
   const roomId  = params.codigo
-  const {question , title} = useRoom(roomId)
+  const {questions } = useRoom(roomId)
 
-  
-    async function handleSendQuestion(event){
+  async function handleSendQuestion(event){
     event.preventDefault()
 
     if(newQuestion.trim === ""){
@@ -41,9 +40,13 @@ export function Room(){
     await database.ref(`rooms/new/${roomId}/questions`).push(question)
     setNewQuestion('')
    
+
+   
+
   }
-  
-  
+  const question = [...questions]
+    
+ 
   return(
     <div className="container">
       <div className='container-room'>
@@ -89,27 +92,22 @@ export function Room(){
           </form>
 
 
-
-          <section id="questions">
-            <h2 className="sr-only">Perguntas da comunidade</h2>
-            <div className="questions">
-
-            {question.map(question => {
-
+        </main>
+          <div className="question-in-rome">
+            {question.map(question =>{
               return(
                 <Question
-                  key={question.id}
                   content={question.content}
                 >
+
                 </Question>
-              )
+              );
             })}
-
-
-            </div>
-          </section>
-        </main>
+        </div>
       </div>
+
+      
     </div>
   );
+  
 }

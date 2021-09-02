@@ -1,4 +1,32 @@
 .question{
- width: 100%;
- background-color: red;
+  background-color: #E0ECFF;
+  display: flex;
+  width: 100%;
+  overflow: none;
+  height: 100%;
+  margin-bottom: 2.5rem;
+  border-radius: 0 8px 8px 8px ;
+  .footer-question{
+    display: flex;
+    .user-info{
+      font-size: 16px;
+      padding: 20px;
+     
+      >img{
+        background-color: #3485FF;
+        padding: 10px;
+        border-radius: 50px;
+        cursor:pointer;
+      }
+    }
+    >p{
+      font-size: 16px;
+      position: relative;
+      top: 1.5rem;
+      word-break: break-word;
+    }
+
+  }
+
+
 }

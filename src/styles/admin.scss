@@ -1,0 +1,20 @@
+.container-admin-room{
+  header{
+    
+    .content-room{
+      display: flex;
+      justify-content: space-around;
+    
+    }
+    .buttons{
+      display: flex;
+      gap: 2rem;
+    }
+  }
+
+
+  .question-main{
+    margin: 0 25rem;
+  }
+ 
+}
