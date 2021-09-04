@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { useParams} from 'react-router-dom' 
+import { useHistory, useParams} from 'react-router-dom' 
+import {Link} from 'react-router-dom'
 
 import logoImg from '../assets/images/logo.svg'
 import userWhiteImg from '../assets/images/users-white.svg'
@@ -23,6 +24,11 @@ export function Room(){
   const params = useParams()
   const roomId  = params.codigo
   const {questions } = useRoom(roomId)
+  const history = useHistory('')
+
+  function back(){
+    history.push('/rooms/create_room')
+  }
 
   async function handleSendQuestion(event){
     event.preventDefault()
@@ -58,10 +64,14 @@ export function Room(){
             <div className="buttons">
               <RoomCode code="123456"/>
               
-              <Button 
-                text="Criar sala"
-                imagem={<img src={userWhiteImg} alt="crie a sua sala"/>}
-               />
+
+              <button
+                className="button" 
+                onClick={back}
+              >
+                <img src={userWhiteImg} alt="crie a sua sala"/>
+                Criar sala
+              </button>
               
             </div>
           </div> 

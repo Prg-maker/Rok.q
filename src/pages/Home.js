@@ -101,7 +101,7 @@ export function Home(){
 
             </section>
 
-            <button onClick={handleCreateRoom}>
+            <button className="button" onClick={handleCreateRoom}>
               <a class="outlined">
                 <img src={usersImg} alt="Criar sala"/>
 

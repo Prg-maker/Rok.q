@@ -1,4 +1,5 @@
 import '../styles/roomcode.scss'
+import '../styles/button.scss'
 
 
 import copyImg from '../assets/images/copy.svg'
@@ -15,7 +16,7 @@ export function RoomCode(props){
   } 
 
   return(
-    <button className="room-code" onClick={copyRoomCodeToClipboard}>
+    <button className="room-code button" onClick={copyRoomCodeToClipboard}>
       <div>
         <img src={copyImg} alt="Copiar o código" /> 
       </div>

@@ -6,6 +6,23 @@
   height: 100%;
   margin-bottom: 2.5rem;
   border-radius: 0 8px 8px 8px ;
+  justify-content: space-between;
+  &.answer{
+    background-color:  #edf2ff;
+      
+    .footer-question{
+      .user-info{
+        >img{
+          background-color: #A1B2CD;
+        }
+
+       
+      }
+      >p{
+        color: #343436;
+      }
+    }
+  }
   .footer-question{
     display: flex;
     .user-info{
@@ -25,8 +42,17 @@
       top: 1.5rem;
       word-break: break-word;
     }
-
+   
   }
-
+ 
+  .children{
+    display: flex;
+    gap: 2.5rem;
+    height: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: center;
+    margin-right: 1rem;
+  }
 
 }
